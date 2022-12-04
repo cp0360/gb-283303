@@ -6,9 +6,18 @@
 
 str_in = input("Введите строку, либо STOP, чтобы закончить: ").lower()
 string_array = []
+result_array = []
 
+# ввод строк от пользователя и добавление их в массив.
+# ввод прекращается после введения STOP
 while str_in != "stop":
     string_array.append(str_in)
     str_in = input("Введите строку, либо STOP, чтобы закончить: ").lower()
 
-print(string_array)
+# Сортировка массива. Добавление в result_array только подходящих фраз.
+for el in string_array:
+    if len(el) <= 3:
+        result_array.append(el)
+
+# вывод отсортированного массива
+print(result_array)
